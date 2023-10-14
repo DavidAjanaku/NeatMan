@@ -38,16 +38,16 @@ export default function RandomItems() {
           {items.map((item, index) => (
             <div
               key={index}
-              className="bg-gray-100 flex flex-wrap justify-between items-center  p-4 shadow-md"
+              className="bg-gray-100 flex flex-wrap md:justify-between items-center w-full md:w-fit  p-4 shadow-md"
             >
               <div className="promobox-image-video relative">
                 <img
                   src={item.imageSrc}
-                  className="w-full h-32 md:h-52 object-cover hover:transform hover:scale-110 transition-transform duration-300 ease-in-out"
+                  className="w-full h-48 md:h-52 object-cover hover:transform hover:scale-110 transition-transform duration-300 ease-in-out"
                   alt=""
                 />
               </div>
-              <div className="flex flex-col pl-2 ">
+              <div className="flex flex-col pl-2  mx-auto">
                 <div className="text-2xl mb-2 font-light">{item.title}</div>
                 <Link
                   to={item.link}
