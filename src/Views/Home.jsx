@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../Components/Navigation/header'
+import Header from '../Components/Navigation/Header'
 import CategoryNavigation from '../Components/Navigation/CategoryNavigation'
 import SliderComponent from '../SliderComponent'
 import RandomItems from '../Components/RandomItems'
