@@ -58,7 +58,7 @@ export default function ProductPage() {
                     src={image}
                     alt={`Product Image ${index + 1}`}
                     onClick={() => handleImageClick(image)}
-                    className="w-32  border cursor-pointer transform transition-transform hover:scale-105"
+                    className="w-14 md:w-32  border cursor-pointer transform transition-transform hover:scale-105"
                   />
                 ))}
               </div>
@@ -70,7 +70,7 @@ export default function ProductPage() {
                 <div className="product-title">
                   <h1 className="text-3xl">Mineral Resources</h1>
                 </div>
-                <div className="product-price text-xl my-4">4,000</div>
+                <div className="product-price text-xl my-4">₦4000</div>
               </div>
               <section>
                 <form action="">
@@ -89,7 +89,7 @@ export default function ProductPage() {
               </section>
 
               <section className="tabs mt-6">
-                <div className="flex flex-wrap space-x-4">
+                <div className="flex flex-wrap ">
                   <button
                     onClick={() => handleTabClick("description")}
                     className={`tab-button ${
@@ -112,7 +112,7 @@ export default function ProductPage() {
                       activeTab === "customTab1" ? "active-tab" : ""
                     } py-2 px-4 rounded focus:outline-none`}
                   >
-                    CUSTOM TAB 1
+                    SPECIFICATIONS 1
                   </button>
                   <button
                     onClick={() => handleTabClick("customTab2")}
@@ -120,7 +120,7 @@ export default function ProductPage() {
                       activeTab === "customTab2" ? "active-tab" : ""
                     } py-2 px-4 rounded focus:outline-none`}
                   >
-                    CUSTOM TAB 2
+                    SPECIFICATIONS 2
                   </button>
                 </div>
                 <div className="p-4">{tabContent[activeTab]}</div>
