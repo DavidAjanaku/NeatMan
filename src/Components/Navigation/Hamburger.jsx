@@ -3,6 +3,8 @@ import profileIcon from "../../assets/profile-girl-icon.png";
 import searchIcon from "../../assets/search-line-icon.png";
 import shoppingCartIcon from "../../assets/shopping-cart-icon.png";
 import HamburgerMenu from "react-hamburger-menu";
+import closeX from "../../assets/close-line-icon.svg";
+import dropdown from "../../assets/line-angle-down-icon.svg";
 
 export default function Hamburger() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -72,7 +74,9 @@ export default function Hamburger() {
             } transition-opacity`}
           ></div>
           <div className="modal-container absolute pt-20 left-0 w-2/3 h-screen bg-white p-4 transform transition-transform">
-            <button onClick={toggleModal}>Close Modal</button>
+            <button onClick={toggleModal} className="mb-10">
+              <img src={closeX} className="w-4" alt="" />
+            </button>
             <div className="sidebar">
               <ul>
                 <li>
@@ -82,9 +86,9 @@ export default function Hamburger() {
                   <a
                     href="#"
                     onClick={toggleDropdown}
-                    className="group hover:bg-gray-100"
+                    className="group hover:bg-gray-100 flex items-center"
                   >
-                    Shop
+                    Shop <img src={dropdown} className="w-3 ml-2" alt="" />
                   </a>
                   <ul className="dropdown hidden">
                     <li>
@@ -99,9 +103,10 @@ export default function Hamburger() {
                   <a
                     href="#"
                     onClick={toggleDropdown}
-                    className="group hover:bg-gray-100"
+                    className="group hover:bg-gray-100 flex items-center"
+                    
                   >
-                    Products
+                    Products  <img src={dropdown} className="w-3 ml-2" alt="" />
                   </a>
                   <ul className="dropdown hidden">
                     <li>
@@ -116,9 +121,9 @@ export default function Hamburger() {
                   <a
                     href="#"
                     onClick={toggleDropdown}
-                    className="group hover:bg-gray-100"
+                    className="group hover:bg-gray-100 flex items-center"
                   >
-                    Pages
+                    Pages  <img src={dropdown} className="w-3 ml-2" alt="" />
                   </a>
                   <ul className="dropdown hidden">
                     <li>
@@ -133,9 +138,9 @@ export default function Hamburger() {
                   <a
                     href="#"
                     onClick={toggleDropdown}
-                    className="group hover:bg-gray-100"
+                    className="group hover:bg-gray-100  flex items-center"
                   >
-                    Categories
+                    Categories  <img src={dropdown} className="w-3 ml-2" alt="" />
                   </a>
                   <ul className="dropdown hidden">
                     <li>
@@ -151,7 +156,7 @@ export default function Hamburger() {
                 </li>
               </ul>
             </div>
-            <div className="custom-content mt-5">
+            <div className="custom-content mt-5 absolute bottom-48">
               <p className="text-gray-600">
                 <strong>Customer Service:</strong> 84-123-456-789
               </p>
