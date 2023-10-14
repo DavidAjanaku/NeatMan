@@ -6,18 +6,43 @@ const divStyle = {
   height: "48vh", // Set the height to 100% of the viewport height
   display: "flex",
   alignItems: "center",
-  justifyContent: "center",
+  // justifyContent: "center",
   backgroundSize: "cover",
+  paddingLeft:"40px",
 };
 
 const slideImages = [
   {
     url: "https://images.pexels.com/photos/56030/pyrite-pyrites-mineral-sulfide-56030.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    caption: "Get Raw Materials",
+    caption: (
+      <div className="text-white">
+        <h1 className="text-4xl">New Collection</h1>
+        <h2>Fall 2023</h2>
+       <div>
+       <p>Sale Off 30% and more gift</p>
+       </div>
+       <div className="mt-10">
+       <a href="#shop-now" className="shop-button bg-green-800  p-4 ">
+          SHOP NOW
+        </a>
+       </div>
+      </div>
+    ),
   },
   {
     url: "https://images.pexels.com/photos/6945074/pexels-photo-6945074.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    caption: "Slide 2",
+    caption: (
+      <div className="text-white">
+        <h1 className="text-4xl">Building</h1>
+        <h2>Equipment</h2>
+        <p>End Of Catalogue Deal</p>
+        <div className="mt-10">
+       <a href="#shop-now" className="shop-button bg-green-800  p-4 ">
+          DISCOVER NOW
+        </a>
+        </div>
+      </div>
+    ),
   },
 ];
 
@@ -30,7 +55,7 @@ const Slideshow = () => {
             <div
               style={{ ...divStyle, backgroundImage: `url(${slideImage.url})` }}
             >
-              <h2 style={{ color: "#fff" }}>{slideImage.caption}</h2>
+              {slideImage.caption}
             </div>
           </div>
         ))}
