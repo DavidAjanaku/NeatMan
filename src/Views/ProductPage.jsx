@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Header from "../Components/Navigation/Header";
 import Hamburger from "../Components/Navigation/Hamburger";
+import RelatedProducts from "../Components/RelatedProducts";
+import Footer from "../Components/Navigation/Footer";
 
 export default function ProductPage() {
   const [mainImage, setMainImage] = useState(
@@ -128,7 +130,11 @@ export default function ProductPage() {
             </div>
           </div>
         </div>
+        <div>
+            <RelatedProducts/>
+        </div>
       </div>
+      <Footer/>
     </div>
   );
 }
