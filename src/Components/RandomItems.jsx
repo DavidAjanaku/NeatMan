@@ -33,7 +33,7 @@ export default function RandomItems() {
     <div className="py-10">
       <div className="text-center"></div>
 
-      <div className="flex justify-center mt-6">
+      <div className="flex justify-center  mt-6">
         <div className="flex justify-center flex-wrap gap-4">
           {items.map((item, index) => (
             <div
