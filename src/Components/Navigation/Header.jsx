@@ -71,7 +71,7 @@ export default function Header() {
               <div className="menu-top">
                 <ul className="navbar-nav flex space-x-10">
                   <li className="flex items-center space-x-2 cursor-pointer">
-                    <Link>Home</Link>
+                    <Link to="/">Home</Link>
                   </li>
                   <li className="flex items-center space-x-2 cursor-pointer relative group">
                     <span>Shop</span>

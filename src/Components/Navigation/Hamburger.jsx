@@ -5,6 +5,7 @@ import shoppingCartIcon from "../../assets/shopping-cart-icon.png";
 import HamburgerMenu from "react-hamburger-menu";
 import closeX from "../../assets/close-line-icon.svg";
 import dropdown from "../../assets/line-angle-down-icon.svg";
+import { Link } from "react-router-dom";
 
 export default function Hamburger() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -80,77 +81,77 @@ export default function Hamburger() {
             <div className="sidebar">
               <ul className="space-y-5">
                 <li className="text-xl">
-                  <a href="#">Home</a>
+                  <Link to="#">Home</Link>
                 </li>
                 <li className="relative group text-xl">
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     onClick={toggleDropdown}
                     className="group hover:bg-gray-100 flex items-center"
                   >
                     Shop <img src={dropdown} className="w-3 ml-2" alt="" />
-                  </a>
+                  </Link>
                   <ul className="dropdown hidden">
                     <li className="text-base">
-                      <a href="#">Shop Item 1</a>
+                      <Link to="#">Shop Item 1</Link>
                     </li>
                     <li className="text-base">
-                      <a href="#">Shop Item 2</a>
+                      <Link to="#">Shop Item 2</Link>
                     </li>
                   </ul>
                 </li>
                 <li className="relative group text-xl">
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     onClick={toggleDropdown}
                     className="group hover:bg-gray-100 flex items-center"
                     
                   >
                     Products  <img src={dropdown} className="w-3 ml-2" alt="" />
-                  </a>
+                  </Link>
                   <ul className="dropdown hidden">
                     <li className="text-base">
-                      <a href="#">Product Item 1</a>
+                      <Link to="#">Product Item 1</Link>
                     </li>
                     <li className="text-base">
-                      <a href="#">Product Item 2</a>
+                      <Link to="#">Product Item 2</Link>
                     </li>
                   </ul>
                 </li>
                 <li className="relative group text-xl">
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     onClick={toggleDropdown}
                     className="group hover:bg-gray-100 flex items-center"
                   >
                     Pages  <img src={dropdown} className="w-3 ml-2" alt="" />
-                  </a>
+                  </Link>
                   <ul className="dropdown hidden">
                     <li className="text-base">
-                      <a href="#">Page 1</a>
+                      <Link to="#">Page 1</Link>
                     </li>
                     <li className="text-base">
-                      <a href="#">Page 2</a>
+                      <Link to="#">Page 2</Link>
                     </li>
                   </ul>
                 </li>
                 <li className="relative group text-xl">
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     onClick={toggleDropdown}
                     className="group hover:bg-gray-100  flex items-center"
                   >
                     Categories  <img src={dropdown} className="w-3 ml-2" alt="" />
-                  </a>
+                  </Link>
                   <ul className="dropdown hidden">
                     <li className="text-base">
-                      <a href="#">Category 1</a>
+                      <Link to="#">Category 1</Link>
                     </li>
                     <li className="text-base">
-                      <a href="#">Category 2</a>
+                      <Link to="#">Category 2</Link>
                     </li>
                     <li className="text-base">
-                      <a href="#">Category 3</a>
+                      <Link to="#">Category 3</Link>
                     </li>
                   </ul>
                 </li>

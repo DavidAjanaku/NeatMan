@@ -6,7 +6,7 @@ const items = [
     imageSrc:
       "https://cleversoft-handyman.myshopify.com/cdn/shop/products/product-handy-1_624e64f7-5df5-4e7b-a606-783deffa9ba4_540x.jpg?v=1492508200",
     title: "Mineral 1",
-    link: "/shop1",
+    link: "/ProductPage",
   },
   {
     imageSrc:
