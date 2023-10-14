@@ -81,8 +81,8 @@ export default function ProductPage() {
                     </label>
                   </div>
                   <div className="w-full mt-4">
-                    <button className="bg-green-800 w-full text-white px-4 py-2 ">
-                      BUY IT NOW
+                    <button className="bg-green-800 w-full uppercase text-white px-4 py-2 ">
+                    Purchase item
                     </button>
                   </div>
                 </form>
