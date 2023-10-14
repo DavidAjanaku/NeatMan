@@ -78,11 +78,11 @@ export default function Hamburger() {
               <img src={closeX} className="w-4" alt="" />
             </button>
             <div className="sidebar">
-              <ul>
-                <li>
+              <ul className="space-y-5">
+                <li className="text-xl">
                   <a href="#">Home</a>
                 </li>
-                <li className="relative group">
+                <li className="relative group text-xl">
                   <a
                     href="#"
                     onClick={toggleDropdown}
@@ -91,15 +91,15 @@ export default function Hamburger() {
                     Shop <img src={dropdown} className="w-3 ml-2" alt="" />
                   </a>
                   <ul className="dropdown hidden">
-                    <li>
+                    <li className="text-base">
                       <a href="#">Shop Item 1</a>
                     </li>
-                    <li>
+                    <li className="text-base">
                       <a href="#">Shop Item 2</a>
                     </li>
                   </ul>
                 </li>
-                <li className="relative group">
+                <li className="relative group text-xl">
                   <a
                     href="#"
                     onClick={toggleDropdown}
@@ -109,15 +109,15 @@ export default function Hamburger() {
                     Products  <img src={dropdown} className="w-3 ml-2" alt="" />
                   </a>
                   <ul className="dropdown hidden">
-                    <li>
+                    <li className="text-base">
                       <a href="#">Product Item 1</a>
                     </li>
-                    <li>
+                    <li className="text-base">
                       <a href="#">Product Item 2</a>
                     </li>
                   </ul>
                 </li>
-                <li className="relative group">
+                <li className="relative group text-xl">
                   <a
                     href="#"
                     onClick={toggleDropdown}
@@ -126,15 +126,15 @@ export default function Hamburger() {
                     Pages  <img src={dropdown} className="w-3 ml-2" alt="" />
                   </a>
                   <ul className="dropdown hidden">
-                    <li>
+                    <li className="text-base">
                       <a href="#">Page 1</a>
                     </li>
-                    <li>
+                    <li className="text-base">
                       <a href="#">Page 2</a>
                     </li>
                   </ul>
                 </li>
-                <li className="relative group">
+                <li className="relative group text-xl">
                   <a
                     href="#"
                     onClick={toggleDropdown}
@@ -143,13 +143,13 @@ export default function Hamburger() {
                     Categories  <img src={dropdown} className="w-3 ml-2" alt="" />
                   </a>
                   <ul className="dropdown hidden">
-                    <li>
+                    <li className="text-base">
                       <a href="#">Category 1</a>
                     </li>
-                    <li>
+                    <li className="text-base">
                       <a href="#">Category 2</a>
                     </li>
-                    <li>
+                    <li className="text-base">
                       <a href="#">Category 3</a>
                     </li>
                   </ul>
