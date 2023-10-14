@@ -39,13 +39,13 @@ export default function Hamburger() {
                     animationDuration={0.5}
                   />
                 </div>
-                <img src={searchIcon} className="w-7 h-7" alt="" />
+                {/* <img src={searchIcon} className="w-7 h-7" alt="" /> */}
               </div>
               <div className="logo-container text-2xl uppercase font-semibold w-3/4 text-center">
                 Neatman
               </div>
 
-              <div className="flex w-3/12 justify-end">
+              <div className="flex w-3/12 justify-end space-x-3">
                 <img src={profileIcon} className="w-7 h-7" alt="" />
                 <div className="header-cart-container flex ">
                   <div className="top-currency"></div>

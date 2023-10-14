@@ -17,9 +17,9 @@ const slideImages = [
     caption: (
       <div className="text-white">
         <h1 className="text-4xl">New Collection</h1>
-        <h2>Fall 2023</h2>
+        <h2 className="text-xl my-1">Fall 2023</h2>
        <div>
-       <p>Sale Off 30% and more gift</p>
+       <p className="text-xl">Sale Off 30% and more gift</p>
        </div>
        <div className="mt-10">
        <a href="#shop-now" className="shop-button bg-green-800  p-4 ">
@@ -34,8 +34,8 @@ const slideImages = [
     caption: (
       <div className="text-white">
         <h1 className="text-4xl">Building</h1>
-        <h2>Equipment</h2>
-        <p>End Of Catalogue Deal</p>
+        <h2 className="text-xl my-1">Equipment</h2>
+        <p className="text-xl">End Of Catalogue Deal</p>
         <div className="mt-10">
        <a href="#shop-now" className="shop-button bg-green-800  p-4 ">
           DISCOVER NOW

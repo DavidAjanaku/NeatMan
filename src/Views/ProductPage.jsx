@@ -89,11 +89,11 @@ export default function ProductPage() {
               </section>
 
               <section className="tabs mt-6">
-                <div className="flex flex-wrap ">
+                <div className="flex flex-wrap  md:border-b-2 pb-2">
                   <button
                     onClick={() => handleTabClick("description")}
                     className={`tab-button ${
-                      activeTab === "description" ? "active-tab" : ""
+                      activeTab === "description" ? "active-tab bg-green-600 text-white" : ""
                     } py-2 px-4 rounded focus:outline-none`}
                   >
                     DESCRIPTION
@@ -101,7 +101,7 @@ export default function ProductPage() {
                   <button
                     onClick={() => handleTabClick("reviews")}
                     className={`tab-button ${
-                      activeTab === "reviews" ? "active-tab" : ""
+                      activeTab === "reviews" ? "active-tab bg-green-600 text-white" : ""
                     } py-2 px-4 rounded focus:outline-none`}
                   >
                     REVIEWS
@@ -109,7 +109,7 @@ export default function ProductPage() {
                   <button
                     onClick={() => handleTabClick("customTab1")}
                     className={`tab-button ${
-                      activeTab === "customTab1" ? "active-tab" : ""
+                      activeTab === "customTab1" ? "active-tab bg-green-600 text-white" : ""
                     } py-2 px-4 rounded focus:outline-none`}
                   >
                     SPECIFICATIONS 1
@@ -117,7 +117,7 @@ export default function ProductPage() {
                   <button
                     onClick={() => handleTabClick("customTab2")}
                     className={`tab-button ${
-                      activeTab === "customTab2" ? "active-tab" : ""
+                      activeTab === "customTab2" ? "active-tab bg-green-600 text-white" : ""
                     } py-2 px-4 rounded focus:outline-none`}
                   >
                     SPECIFICATIONS 2
