@@ -72,16 +72,7 @@ export default function FeaturedProducts() {
                   alt={product.name}
                   className="w-full h-48 object-cover"
                 />
-                <div
-                  className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute bottom-0 left-0 right-0"
-                >
-                  <button
-                    onClick={() => handleAddToCart(product.name)}
-                    className="px-4 py-2 bg-green-500  text-white rounded hover:bg-green-600 w-full"
-                  >
-                    Add to Cart
-                  </button>
-                </div>
+             
               </div>
               <div className="mt-2">
                 <div className="text-lg font-normal">{product.name}</div>

@@ -21,8 +21,8 @@ export default function Hamburger() {
       <div className="md:hidden">
         <div className="header-inner mt-3">
           <div className="row flex flex-col">
-            <div className="flex py-10 items-center">
-              <div className="flex w-3/12 space-x-4 items-center">
+            <div className="flex  items-center">
+              <div className="flex  space-x-4 items-center">
                 <div className="hamburger-menu" onClick={toggleModal}>
                   <HamburgerMenu
                     isOpen={isModalOpen}
@@ -44,7 +44,7 @@ export default function Hamburger() {
 
               <div className="flex w-3/12 justify-end">
                 <img src={profileIcon} className="w-7 h-7" alt="" />
-                <div className="header-cart-container flex space-x-5">
+                <div className="header-cart-container flex ">
                   <div className="top-currency"></div>
                   <div className="header-cart relative">
                     <img
@@ -71,7 +71,7 @@ export default function Hamburger() {
               isModalOpen ? "opacity-100" : "opacity-0"
             } transition-opacity`}
           ></div>
-          <div className="modal-container absolute left-0 w-2/3 h-screen bg-white p-4 transform transition-transform">
+          <div className="modal-container absolute pt-20 left-0 w-2/3 h-screen bg-white p-4 transform transition-transform">
             <button onClick={toggleModal}>Close Modal</button>
             <div className="sidebar">
               <ul>
