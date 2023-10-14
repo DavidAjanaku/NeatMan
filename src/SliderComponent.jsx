@@ -2,30 +2,23 @@ import React from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
-const spanStyle = {
-  padding: "20px",
-  color: "#fff",
-  fontSize: "20px",
-};
-
 const divStyle = {
+  height: "48vh", // Set the height to 100% of the viewport height
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   backgroundSize: "cover",
-  height: "600px",
 };
 
 const slideImages = [
   {
     url: "https://images.pexels.com/photos/56030/pyrite-pyrites-mineral-sulfide-56030.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    caption: "Get Raw MAterials",
+    caption: "Get Raw Materials",
   },
   {
     url: "https://images.pexels.com/photos/6945074/pexels-photo-6945074.jpeg?auto=compress&cs=tinysrgb&w=1600",
     caption: "Slide 2",
   },
- 
 ];
 
 const Slideshow = () => {
@@ -37,7 +30,7 @@ const Slideshow = () => {
             <div
               style={{ ...divStyle, backgroundImage: `url(${slideImage.url})` }}
             >
-              <span style={spanStyle}>{slideImage.caption}</span>
+              <h2 style={{ color: "#fff" }}>{slideImage.caption}</h2>
             </div>
           </div>
         ))}
