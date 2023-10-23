@@ -15,9 +15,9 @@ export default function ShippingEstimates() {
   };
 
   return (
-    <div className=" p-4">
+    <div className=" p-6 bg-slate-200">
       <h2 className="text-2xl font-semibold mb-4">Get Shipping Estimates</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className=''>
         <div className="mb-4">
           <label htmlFor="country" className="block text-sm font-medium text-gray-700">Country</label>
           <input
@@ -25,7 +25,7 @@ export default function ShippingEstimates() {
             id="country"
             value={country}
             onChange={(e) => setCountry(e.target.value)}
-            className="border rounded-lg px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-300"
+            className="border  px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-300"
           />
         </div>
         <div className="mb-4">
@@ -35,7 +35,7 @@ export default function ShippingEstimates() {
             id="state"
             value={state}
             onChange={(e) => setState(e.target.value)}
-            className="border rounded-lg px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-300"
+            className="border  px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-300"
           />
         </div>
         <div className="mb-4">
@@ -45,7 +45,7 @@ export default function ShippingEstimates() {
             id="zipCode"
             value={zipCode}
             onChange={(e) => setZipCode(e.target.value)}
-            className="border rounded-lg px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-300"
+            className="border  px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-300"
           />
         </div>
         <div className="mb-4">
@@ -54,7 +54,7 @@ export default function ShippingEstimates() {
             id="specialInstructions"
             value={specialInstructions}
             onChange={(e) => setSpecialInstructions(e.target.value)}
-            className="border rounded-lg px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-300"
+            className="border  px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-300"
           />
         </div>
         <button

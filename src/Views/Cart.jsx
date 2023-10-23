@@ -3,6 +3,9 @@ import Header from "../Components/Navigation/Header";
 import Hamburger from "../Components/Navigation/Hamburger";
 import { Link } from "react-router-dom";
 import ShippingEstimates from "../Components/ShippingEstimates";
+import rightArrow from "../assets/line-angle-right-icon.svg"
+
+
 
 export default function Cart() {
   const cartItems = [
@@ -30,19 +33,19 @@ export default function Cart() {
         <Header />
         <Hamburger />
       </div>
-      <div className="clearfix py-10 bg-slate-300 my-2 p-2">
+      <div className="clearfix py-10 bg-slate-200 my-2 p-10">
         <div className="breadcrumb">
-          <div className="breadcrumb__position">
-            <Link to="/">Home</Link>
-            <span className=" mx-4">></span>
-            <strong className="font-light">Your Shopping Cart</strong>
+          <div className="breadcrumb__position flex items-center">
+            <Link to="/" className="text-sm">Home</Link>
+            <span className=" mx-4"><img src={rightArrow} className="w-2" alt="" /></span>
+            <strong className="font-light text-sm">Your Shopping Cart</strong>
           </div>
         </div>
       </div>
   
       <div className="main-content">
         <div className="cart">
-          <h1 className="text-center text-4xl my-8">My Cart</h1>
+          <h1 className="text-center text-4xl my-8 font-light">My Cart</h1>
           <div className="table-container">
             <table className="table-auto w-full">
               <thead>

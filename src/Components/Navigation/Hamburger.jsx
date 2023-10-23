@@ -235,10 +235,10 @@ export default function Hamburger() {
 
       {cartVisible && (
         <div className="fixed right-0 top-0 h-full w-full bg-opacity-75 bg-black z-50 ">
-          <div className="bg-white p-4 h-full w-[90%] absolute right-0 rounded shadow-lg">
+          <div className="bg-white p-4 h-full w-[90%] absolute right-0  shadow-lg">
             <button
               onClick={closeCart}
-              className="close-cart absolute top-2 right-2 text-red-500"
+              className="close-cart absolute top-5 right-5 text-red-500"
             >
               <img src={closeBtn} className="w-5" alt="" />
             </button>
@@ -250,7 +250,7 @@ export default function Hamburger() {
               <div className="mini_cart_header">
                 <ul className="cart-list h-[40vh] overflow-scroll">
                   {cartItems.map((item, index) => (
-                    <li className="item flex items-center my-4" key={index}>
+                    <li className="item flex items-center my-4 border-b-[1px] pb-4" key={index}>
                       <Link to="/" className="w-28 h-28">
                         <img
                           src={item.image}
@@ -284,18 +284,18 @@ export default function Hamburger() {
               <hr />
               <div className="wrap-btcart flex flex-col">
                 <div className="summary ">
-                  <div className="total flex justify-between py-4">
+                  <div className="total flex justify-between py-4 text-xl">
                     <div className="label">Total:</div>
                     <div className="price">$1,700</div>
                   </div>
                 </div>
                 <div className="actions">
                   <div className="view-cart my-2">
-                    <Link className="flex justify-center border-2 p-3 uppercase">
+                    <Link to="/Cart" className="flex justify-center border-2 p-3 uppercase">
                       View Cart
                     </Link>
                   </div>
-                  <button className="flex mx-auto border-2 w-full justify-center py-3 my-3 uppercase bg-green-800 text-white">
+                  <button className="flex mx-auto  w-full justify-center py-3 my-3 uppercase bg-green-800 text-white">
                     Checkout
                   </button>
                 </div>

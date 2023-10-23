@@ -15,9 +15,9 @@ const slideImages = [
   {
     url: "https://images.pexels.com/photos/56030/pyrite-pyrites-mineral-sulfide-56030.jpeg?auto=compress&cs=tinysrgb&w=1600",
     caption: (
-      <div className="text-white">
-        <h1 className="text-4xl">New Collection</h1>
-        <h2 className="text-xl my-1">Fall 2023</h2>
+      <div className="text-white ml-4">
+        <h1 className="text-4xl  md:text-5xl">New Collection</h1>
+        <h2 className="text-xl my-1 md:text-3xl">Fall 2023</h2>
        <div>
        <p className="text-xl">Sale Off 30% and more gift</p>
        </div>
@@ -32,9 +32,9 @@ const slideImages = [
   {
     url: "https://images.pexels.com/photos/6945074/pexels-photo-6945074.jpeg?auto=compress&cs=tinysrgb&w=1600",
     caption: (
-      <div className="text-white">
-        <h1 className="text-4xl">Building</h1>
-        <h2 className="text-xl my-1">Equipment</h2>
+      <div className="text-white ml-4">
+        <h1 className="text-4xl md:text-5xl">Building</h1>
+        <h2 className="text-xl my-1 md:text-3xl">Equipment</h2>
         <p className="text-xl">End Of Catalogue Deal</p>
         <div className="mt-10">
        <a href="#shop-now" className="shop-button bg-green-800  p-4 ">
