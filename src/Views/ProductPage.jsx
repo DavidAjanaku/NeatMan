@@ -27,10 +27,10 @@ export default function ProductPage() {
   };
 
   const tabContent = {
-    description: <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda expedita exercitationem quis odio perspiciatis placeat veniam. Ad ipsum, cum accusamus libero recusandae quasi quisquam, natus omnis laborum laudantium commodi ut.</p>,
-    reviews: <p>Reviews content goes here.</p>,
-    customTab1: <p>Custom Tab 1 content goes here.</p>,
-    customTab2: <p>Custom Tab 2 content goes here.</p>,
+    description: <p className="text-slate-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda expedita exercitationem quis odio perspiciatis placeat veniam. Ad ipsum, cum accusamus libero recusandae quasi quisquam, natus omnis laborum laudantium commodi ut.</p>,
+    reviews: <p className="text-slate-500">Reviews content goes here.</p>,
+    customTab1: <p className="text-slate-500">Custom Tab 1 content goes here.</p>,
+    customTab2: <p className="text-slate-500">Custom Tab 2 content goes here.</p>,
   };
 
   return (
@@ -90,13 +90,13 @@ export default function ProductPage() {
                 </form>
               </section>
 
-              <section className="tabs mt-6">
-                <div className="flex flex-wrap  md:border-b-2 pb-2">
+              <section className="tabs mt-32">
+                <div className="flex flex-wrap text-sm  md:border-b-2 ">
                   <button
                     onClick={() => handleTabClick("description")}
                     className={`tab-button ${
                       activeTab === "description" ? "active-tab bg-green-600 text-white" : ""
-                    } py-2 px-4 rounded focus:outline-none`}
+                    } py-2 px-4  focus:outline-none`}
                   >
                     DESCRIPTION
                   </button>
@@ -104,7 +104,7 @@ export default function ProductPage() {
                     onClick={() => handleTabClick("reviews")}
                     className={`tab-button ${
                       activeTab === "reviews" ? "active-tab bg-green-600 text-white" : ""
-                    } py-2 px-4 rounded focus:outline-none`}
+                    } py-2 px-4  focus:outline-none`}
                   >
                     REVIEWS
                   </button>
@@ -112,7 +112,7 @@ export default function ProductPage() {
                     onClick={() => handleTabClick("customTab1")}
                     className={`tab-button ${
                       activeTab === "customTab1" ? "active-tab bg-green-600 text-white" : ""
-                    } py-2 px-4 rounded focus:outline-none`}
+                    } py-2 px-4  focus:outline-none`}
                   >
                     SPECIFICATIONS 1
                   </button>
@@ -120,7 +120,7 @@ export default function ProductPage() {
                     onClick={() => handleTabClick("customTab2")}
                     className={`tab-button ${
                       activeTab === "customTab2" ? "active-tab bg-green-600 text-white" : ""
-                    } py-2 px-4 rounded focus:outline-none`}
+                    } py-2 px-4  focus:outline-none`}
                   >
                     SPECIFICATIONS 2
                   </button>
