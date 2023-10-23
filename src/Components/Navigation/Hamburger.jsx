@@ -248,7 +248,7 @@ export default function Hamburger() {
               </div>
 
               <div className="mini_cart_header">
-                <ul className="cart-list h-[50vh] overflow-scroll">
+                <ul className="cart-list h-[40vh] overflow-scroll">
                   {cartItems.map((item, index) => (
                     <li className="item flex items-center my-4" key={index}>
                       <Link to="/" className="w-28 h-28">
