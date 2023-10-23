@@ -4,6 +4,11 @@ import Hamburger from "../Components/Navigation/Hamburger";
 import { Link } from "react-router-dom";
 import ShippingEstimates from "../Components/ShippingEstimates";
 import rightArrow from "../assets/line-angle-right-icon.svg"
+import leftArrow from "../assets/arrow-curved-left-icon.svg"
+import clearButton from "../assets/close-line-icon.svg"
+import Footer from "../Components/Navigation/Footer";
+
+
 
 export default function Cart() {
   const cartItems = [
@@ -77,12 +82,12 @@ export default function Cart() {
                       ))}
                     </tbody>
                   </table>
-                  <div className="flex justify-between my-4">
-                    <Link to="/" className="bg-green-500 text-white py-2 px-4 rounded">
-                      CONTINUE SHOPPING
+                  <div className="flex justify-between my-4 text-xs space-x-4">
+                    <Link to="/" className="  py-2 px-4 rounded flex">
+                    <img src={leftArrow} className="w-4 mr-2" alt="" />  CONTINUE SHOPPING
                     </Link>
-                    <button className="bg-yellow-500 text-white py-2 px-4 rounded">
-                      CLEAR SHOPPING CART
+                    <button className=" py-2 px-4 rounded flex  items-center">
+                    <img src={clearButton} className="w-3 mr-2" alt="" /> Clear Shopping cart
                     </button>
                   </div>
                   <ShippingEstimates />
@@ -98,6 +103,8 @@ export default function Cart() {
           </div>
         </div>
       </div>
+
+      <Footer/>
     </div>
   );
 }
