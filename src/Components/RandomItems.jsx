@@ -12,7 +12,7 @@ const items = [
     imageSrc:
       "https://cleversoft-handyman.myshopify.com/cdn/shop/products/product-handy-11_aecb24c6-5bdc-4419-bc72-9e8e67c2c2bd_540x.jpg?v=1492508656",
     title: "Mineral 2",
-    link: "/shop2",
+    link: "/MarketPlace",
   },
   {
     imageSrc:
