@@ -132,7 +132,7 @@ export default function Header() {
                 </div>
               </div>
             </div>
-            <div className="menu-main-home flex justify-between bg-green-800 text-white px-2 py-4">
+            <div className="menu-main-home flex justify-between bg-green-800 text-white px-4 py-4">
               <div className="menu-top">
                 <ul className="navbar-nav flex space-x-10">
                   <li className="flex items-center space-x-2 cursor-pointer">

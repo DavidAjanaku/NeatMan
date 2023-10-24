@@ -67,7 +67,7 @@ export default function Cart() {
                       {cartItems.map((item, index) => (
                         <tr key={index} className="border-t-2">
                           <td className="px-4 py-2">
-                            <div className="flex items-center justify-between">
+                            <div className="flex flex-wrap items-center justify-between">
                               <img
                                 src={item.image}
                                 alt={item.name}
@@ -108,3 +108,4 @@ export default function Cart() {
     </div>
   );
 }
+ 

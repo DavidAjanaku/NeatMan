@@ -2,12 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&display=swap");
 
 .example {
   width: -webkit-fill-available;
 }
 
-body {
-  font-family: "Montserrat", "Roboto", sans-serif;
-}
