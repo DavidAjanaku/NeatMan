@@ -112,7 +112,9 @@ export default function Hamburger() {
               </div>
 
               <div className="flex w-3/12 justify-end space-x-3">
-                <img src={profileIcon} className="w-7 h-7" alt="" />
+              <Link to="/signup">
+              <img src={profileIcon} className="w-7 h-7" alt="" />
+              </Link>
                 <div className="header-cart-container flex ">
                   <div className="top-currency"></div>
                   <div className="header-cart relative">

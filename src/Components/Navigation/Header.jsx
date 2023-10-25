@@ -114,9 +114,11 @@ export default function Header() {
                 <img src={searchIcon} className="w-5 h-5" alt="" />
               </div>
               <div className="header-cart-container flex space-x-5">
-                <div className="top-currency">
+               <Link to="/signup">
+               <div className="top-currency cursor-pointer">
                   <img src={profileIcon} className="w-7 h-7" alt="" />
                 </div>
+               </Link>
                 <div className="header-cart relative">
                   <img
                     src={shoppingCartIcon}
