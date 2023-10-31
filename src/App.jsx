@@ -10,7 +10,11 @@ import Account from "./Components/UserDashboard/Account";
 import AccountOrder from "./Components/UserDashboard/AccountOrder";
 import AccountSettings from "./Components/UserDashboard/AccountSettings";
 import AccountAddress from "./Components/UserDashboard/AccountAddress";
-
+import EditHomepage from "./Components/AdminDashboard/EditHomepage";
+import MenuEditor from "./Components/AdminDashboard/MenuEditor";
+import EditCategories from "./Components/AdminDashboard/EditCategories";
+import Products from "./Components/AdminDashboard/Products";
+import NewProducts from "./Components/AdminDashboard/NewProducts";
 function App() {
   return (
     <Router>
@@ -26,6 +30,11 @@ function App() {
         <Route path="/AccountOrder" element={<AccountOrder />} />
         <Route path="/AccountSettings" element={<AccountSettings />} />
         <Route path="/AccountAddress" element={<AccountAddress />} />
+        <Route path="/EditHomepage" element={<EditHomepage />} />
+        <Route path="/MenuEditor" element={<MenuEditor />} />
+        <Route path="/EditCategories" element={<EditCategories />} />
+        <Route path="/Products" element={<Products />} />
+        <Route path="/NewProducts" element={<NewProducts />} />
 
       </Routes>
     </Router>

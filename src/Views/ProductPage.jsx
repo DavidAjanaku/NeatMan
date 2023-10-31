@@ -15,6 +15,9 @@ export default function ProductPage() {
     "https://cleversoft-handyman.myshopify.com/cdn/shop/products/product-handy-6_3190b6f1-1588-4d1b-96d8-0811824ca950.jpg?v=1492508659",
   ];
 
+  const [inquiryMessage, setInquiryMessage] = useState("");
+  const [showMessage, setShowMessage] = useState(false);
+
   const [selectedWeight, setSelectedWeight] = useState(1);
 
   const calculatePrice = () => {
@@ -35,6 +38,21 @@ export default function ProductPage() {
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
+  };
+
+  const handleInquirySubmit = (event) => {
+    event.preventDefault();
+    // You can submit the data to the console
+    console.log("Inquiry message:", inquiryMessage);
+
+    // Show a popup message
+    setShowMessage(true);
+
+    // Reset the message field
+    setInquiryMessage("");
+
+    // You can also send the inquiry data to your backend for further processing
+    // Example: fetch('/api/inquiries', { method: 'POST', body: JSON.stringify({ message: inquiryMessage }) });
   };
 
   const tabContent = {
@@ -92,40 +110,49 @@ export default function ProductPage() {
             <div>
               <div className="fixed-product">
                 <div className="product-title">
-                  <h1 className="text-3xl">Mineral Resources</h1>
+                  <h1 className="text-3xl">Iron Ore</h1>
                 </div>
-                <div className="product-price text-xl my-4">
-                  ₦{calculatePrice()}
-                </div>
+               
               </div>
               <section>
-                <form action="">
+                <form onSubmit={handleInquirySubmit}>
                   <div className="mt-4">
                     <label
-                      htmlFor="weightInput"
+                      htmlFor="inquiryInput"
                       className="block text-sm text-gray-600"
                     >
-                      Input Weight (kg):
+                      Make an Inquiry:
                     </label>
-                    <input
-                      type="number"
-                      id="weightInput"
-                      step="0.1"
-                      min="0.1"
-                      value={selectedWeight}
-                      onChange={handleWeightChange}
-                      className="w-2/6 my-2 p-2"
+                    <textarea
+                      type="text"
+                      id="inquiryInput"
+                      value={inquiryMessage}
+                      onChange={(e) => setInquiryMessage(e.target.value)}
+                      className="w-full my-2 p-2"
+                      required
                     />
                   </div>
 
                   <div className="w-full mt-4">
-                    <button className="bg-green-800 w-full uppercase text-white px-4 py-2">
-                      Purchase item
+                    <button
+                      type="submit"
+                      className="bg-green-800 w-full uppercase text-white px-4 py-2"
+                    >
+                      Submit Inquiry
                     </button>
                   </div>
                 </form>
               </section>
-
+              {showMessage && (
+                <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-40 z-50">
+                  <div className="bg-white p-4 rounded shadow-lg">
+                    <p>
+                    Your message has been sent successfully! You can expect a response within the next 24 hours.
+                    </p>
+                    <button onClick={() => setShowMessage(false)}>Close</button>
+                  </div>
+                </div>
+              )}
               <section className="tabs mt-32">
                 <div className="flex flex-wrap text-sm md:border-b-2 ">
                   <button

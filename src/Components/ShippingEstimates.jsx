@@ -1,67 +1,57 @@
 import React, { useState } from 'react';
 
-export default function ShippingEstimates() {
-  const [country, setCountry] = useState('');
-  const [state, setState] = useState('');
-  const [zipCode, setZipCode] = useState('');
-  const [specialInstructions, setSpecialInstructions] = useState('');
+export default function InquiryForm() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Handle form submission logic here.
+    // You can send the inquiry to your backend or perform other actions as needed.
 
-    console.log('Submitted Data:', { country, state, zipCode, specialInstructions });
+    console.log('Submitted Inquiry:', { name, email, message });
   };
 
   return (
-    <div className=" p-6 bg-slate-200">
-      <h2 className="text-2xl font-semibold mb-4">Get Shipping Estimates</h2>
-      <form onSubmit={handleSubmit} className=''>
+    <div className="p-6 bg-slate-200">
+      <h2 className="text-2xl font-semibold mb-4">Submit an Inquiry</h2>
+      <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label htmlFor="country" className="block text-sm font-medium text-gray-700">Country</label>
+          <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
           <input
             type="text"
-            id="country"
-            value={country}
-            onChange={(e) => setCountry(e.target.value)}
-            className="border  px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-300"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="border px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-300"
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="state" className="block text-sm font-medium text-gray-700">State</label>
+          <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
           <input
-            type="text"
-            id="state"
-            value={state}
-            onChange={(e) => setState(e.target.value)}
-            className="border  px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-300"
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="border px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-300"
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="zipCode" className="block text-sm font-medium text-gray-700">Zip/Postal Code</label>
-          <input
-            type="text"
-            id="zipCode"
-            value={zipCode}
-            onChange={(e) => setZipCode(e.target.value)}
-            className="border  px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-300"
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="specialInstructions" className="block text-sm font-medium text-gray-700">Special Instructions</label>
+          <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
           <textarea
-            id="specialInstructions"
-            value={specialInstructions}
-            onChange={(e) => setSpecialInstructions(e.target.value)}
-            className="border  px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-300"
+            id="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            className="border px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-300"
           />
         </div>
         <button
           type="submit"
-          className="bg-green-800 text-white  px-4 py-2  focus:outline-none"
+          className="bg-green-800 text-white px-4 py-2 focus:outline-none"
         >
-          Get Estimates
+          Submit Inquiry
         </button>
       </form>
     </div>
