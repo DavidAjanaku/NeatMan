@@ -103,7 +103,9 @@ export default function Header() {
           <div className="row flex flex-col ">
             <div className="flex justify-between items-center py-10">
               <div className="logo-container text-3xl uppercase font-semibold">
+                <Link to="/">
                 <img src={Logo} className="w-20 " alt="" />
+                </Link>
               </div>
               <div className="search-bar border w-3/5 px-5 p-2 items-center h-12 bg-gray-200 rounded-full flex justify-between">
                 <input
@@ -143,7 +145,7 @@ export default function Header() {
                   <li className="flex items-center space-x-2 cursor-pointer relative group">
                     <span>Shop</span>
                     <img src={arrowDownIcon} className="w-2 h-2 ml-1" alt="" />
-                    <ul className="absolute text-black hidden mt-2 py-2 bg-white border border-gray-300 rounded shadow-lg group-hover:block top-4 z-10 p-4">
+                    <ul className="absolute text-black hidden mt-2 py-2 bg-white border w-max border-gray-300 rounded shadow-lg group-hover:block top-4 z-10 p-4">
                       <li>
                         <Link to="/shop-category-1">Category 1</Link>
                       </li>
@@ -155,7 +157,7 @@ export default function Header() {
                   <li className="flex items-center space-x-2 cursor-pointer relative group">
                     <span>Products</span>
                     <img src={arrowDownIcon} className="w-2 h-2 ml-1" alt="" />
-                    <div className="absolute absolute text-black hidden mt-2 py-2 bg-white border border-gray-300 rounded shadow-lg group-hover:block top-4 z-10 p-4 ">
+                    <div className="absolute w-max text-black hidden mt-2 py-2 bg-white border border-gray-300 rounded shadow-lg group-hover:block top-4 z-10 p-4 ">
                       <ul className="">
                         <div className="md:flex md:justify-between md:space-x-5 mt-7">
                           <div>
@@ -166,23 +168,7 @@ export default function Header() {
                               <li className="py-2">New Arrivals</li>
                             </ul>
                           </div>
-                          {productsData.map((product, index) => (
-                            <div key={index} className="mb-5">
-                              <img
-                                src={product.image}
-                                alt={product.name}
-                                className="w-full max-w-full md:w-64 md:h-auto object-cover"
-                              />
-                              <div>
-                                <div className="font-semibold">
-                                  {product.name}
-                                </div>
-                                <div className="text-gray-600">
-                                  {product.price}
-                                </div>
-                              </div>
-                            </div>
-                          ))}
+                       
                         </div>
                       </ul>
                     </div>
@@ -190,7 +176,7 @@ export default function Header() {
                   <li className="flex items-center space-x-2 cursor-pointer relative group">
                     <span>Pages</span>
                     <img src={arrowDownIcon} className="w-2 h-2 ml-1" alt="" />
-                    <ul className="absolute text-black hidden mt-2 py-2 bg-white border border-gray-300 rounded shadow-lg group-hover:block top-4 z-10 w-[500px] p-4">
+                    <ul className="absolute text-black hidden mt-2 py-2 w-max bg-white border border-gray-300 rounded shadow-lg group-hover:block top-4 z-10 w-[500px] p-4">
                       <li>
                         <Link to="/about-us">About Us</Link>
                       </li>

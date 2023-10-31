@@ -110,8 +110,9 @@ export default function Hamburger() {
                 {/* <img src={searchIcon} className="w-7 h-7" alt="" /> */}
               </div>
               <div className="logo-container text-2xl uppercase font-semibold w-3/4 text-center">
-              <img src={Logo} className="w-20 mx-auto" alt="" />
-              </div>
+              <Link to="/">
+                <img src={Logo} className="w-20 mx-auto" alt="" />
+                </Link>              </div>
 
               <div className="flex w-3/12 justify-end space-x-3">
               <Link to="/signup">
