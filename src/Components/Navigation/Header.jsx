@@ -7,7 +7,7 @@ import arrowDownIcon from "../../assets/line-angle-down-icon.svg";
 import CategoryNavigation from "./CategoryNavigation";
 import cancelBtn from "../../assets/close-round-line-icon.svg"
 import closeBtn from "../../assets/close-line-icon.svg"
-
+import Logo from "../../assets/Neatman-01.png"
 const productsData = [
   {
     name: "Product 1",
@@ -100,12 +100,12 @@ export default function Header() {
     <div>
       <div className="hidden md:block">
         <div className="header-inner mt-3">
-          <div className="row flex flex-col">
-            <div className="flex justify-between py-10">
+          <div className="row flex flex-col ">
+            <div className="flex justify-between items-center py-10">
               <div className="logo-container text-3xl uppercase font-semibold">
-                Neatman
+                <img src={Logo} className="w-20 " alt="" />
               </div>
-              <div className="search-bar border w-3/5 px-5 p-2 bg-gray-200 rounded-full flex justify-between">
+              <div className="search-bar border w-3/5 px-5 p-2 items-center h-12 bg-gray-200 rounded-full flex justify-between">
                 <input
                   type="text"
                   placeholder="Search products"

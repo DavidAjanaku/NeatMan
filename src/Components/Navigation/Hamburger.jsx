@@ -8,6 +8,8 @@ import dropdown from "../../assets/line-angle-down-icon.svg";
 import { Link } from "react-router-dom";
 import cancelBtn from "../../assets/close-round-line-icon.svg"
 import closeBtn from "../../assets/close-line-icon.svg"
+import Logo from "../../assets/Neatman-01.png"
+
 
 export default function Hamburger() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -108,7 +110,7 @@ export default function Hamburger() {
                 {/* <img src={searchIcon} className="w-7 h-7" alt="" /> */}
               </div>
               <div className="logo-container text-2xl uppercase font-semibold w-3/4 text-center">
-                Neatman
+              <img src={Logo} className="w-20 mx-auto" alt="" />
               </div>
 
               <div className="flex w-3/12 justify-end space-x-3">
