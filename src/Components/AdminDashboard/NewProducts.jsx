@@ -11,29 +11,17 @@ export default function NewProducts() {
   const [galleryImages, setGalleryImages] = useState([]);
   const [frontImage, setFrontImage] = useState("");
   const [alternateImage, setAlternateImage] = useState("");
-  const [sizes, setSizes] = useState([]);
   const [specifications, setspecifications] = useState("");
 
   const [formData, setFormData] = useState({
     title: "",
     details: "",
-    price: "",
-    salePrice: "",
-    startDate: "",
-    endDate: "",
+  
     tags: "",
-    gender: "",
   });
 
-  const [gender, setGender] = useState("");
 
-  const handleGenderChange = (event) => {
-    setGender(event.target.value);
-  };
 
-  const handleScheduleClick = () => {
-    setShowSchedule(!showSchedule);
-  };
 
   const handleCategoryChange = (event) => {
     const { value, checked } = event.target;
@@ -57,10 +45,7 @@ export default function NewProducts() {
       categories,
       galleryImages,
       frontImage,
-      alternateImage,
-      sizes,
       specifications,
-      gender,
     };
     console.log("Submitted data:", data);
     // Add your submission logic here
@@ -69,17 +54,13 @@ export default function NewProducts() {
     setFormData({
       title: "",
       details: "",
-      price: "",
-      salePrice: "",
-      startDate: "",
-      endDate: "",
+    
       tags: "",
     });
     setCategories([]);
     setGalleryImages([]);
     setFrontImage("");
-    setAlternateImage("");
-    setSizes([]);
+  
     setspecifications("");
   };
 
@@ -99,7 +80,7 @@ export default function NewProducts() {
   return (
     <div className="flex">
       <div className="sidebar bg-gray-200 w-1/4 border border-gray-300 h-[100vh]">
-        <Sidebar/>
+        <Sidebar />
       </div>
       <div className="main-content flex-1 bg-white h-[100vh] p-4 ">
         <header>
@@ -136,8 +117,7 @@ export default function NewProducts() {
                 className="border border-gray-300 w-full p-2"
               ></textarea>
             </div>
-         
-           
+
             <div className="border-b border-gray-300  fontBold">
               <h2 className="border-b border-gray-300 py-4 fontBold text-2xl">
                 Specifications
@@ -149,10 +129,20 @@ export default function NewProducts() {
                   onChange={(e) => setspecifications(e.target.value)}
                   className="border border-gray-300 w-full p-2"
                 />
+
+                <label
+                  htmlFor=""
+                  className="block text-sm text-gray-600"
+                >
+                  Select a resource:
+                </label>
+                <select className="w-full my-2 p-2">
+                  <option value="bronze">bronze</option>
+                  <option value="aluminium">Aluminium</option>
+                  <option value="copper">Copper</option>
+                </select>
               </div>
             </div>
-
-           
 
             <Button text=" Add Product" />
           </form>
@@ -180,11 +170,6 @@ export default function NewProducts() {
             Save to draft
           </button>
         </div>
-        
-
-
-
-        
 
         <div className="border-b border-gray-300 p-4 fontBold">
           <h2 className="border-b border-gray-300 py-4 fontBold text-2xl">
@@ -204,7 +189,7 @@ export default function NewProducts() {
               }}
             />
           </div>
-        
+
           <div className="image-preview flex my-4">
             {frontImage && (
               <img
@@ -260,20 +245,20 @@ export default function NewProducts() {
             <label>
               <input
                 type="checkbox"
-                value="Uncategorised"
+                value="Featured Products"
                 onChange={handleCategoryChange}
               />{" "}
-              Uncategorised
+              Featured Products
             </label>
           </div>
           <div>
             <label>
               <input
                 type="checkbox"
-                value="Casual"
+                value="Random"
                 onChange={handleCategoryChange}
               />{" "}
-              Casual
+              Random
             </label>
           </div>
           <div>
@@ -286,67 +271,33 @@ export default function NewProducts() {
               Travel
             </label>
           </div>
-          <div>
-            <button
-              type="button"
-              onClick={() => setShowModal(true)}
-              className="text-blue-500 underline"
-            >
-              Create New Category
-            </button>
-          </div>
+        
         </div>
-        <div className="border-b border-gray-300 p-4 fontBold">
+        <div className="border-b border-gray-300 mb-10 p-4 fontBold">
           <h2 className="border-b border-gray-300 py-4 fontBold text-2xl">
-            Product Tags
+            Tags
           </h2>
+          <p className="text-slate-400">
+            include a tag if you choose featured to properly set the item there
+          </p>
           <label className="fontBold">Tags</label>
-<div>
-  <input
-    type="text"
-    className="border border-black"
-    value={formData.tags}
-    name="tags"  
-    onChange={handleChange}
-  />
-</div>
+          <div>
+            <label
+              htmlFor="resourceSelect"
+              className="block text-sm text-gray-600"
+            >
+              Select a resource:
+            </label>
+            <select className="w-full my-2 p-2">
+              <option value="coal">Coal</option>
+              <option value="aluminium">Aluminium</option>
+              <option value="copper">Copper</option>
+            </select>
+          </div>
         </div>
       </div>
 
-      {/* Category Modal */}
-      {showModal && (
-        <div className="modal-overlay p-4">
-          <div className="modal">
-            <h2 className="fontBold text-2xl">Create New Category</h2>
-            <form onSubmit={handleNewCategorySubmit}>
-              <div>
-                <label htmlFor="newCategory" className="fontBold">
-                  Category Name
-                </label>
-                <input
-                  type="text"
-                  id="newCategory"
-                  name="newCategory"
-                  value={newCategory}
-                  className="border border-black block"
-                  onChange={(event) => setNewCategory(event.target.value)}
-                />
-              </div>
-              <div className="modal-buttons">
-                <button type="submit" className="bg-black text-white mr-4 p-2">
-                  Add Category
-                </button>
-                <button
-                  className="bg-black text-white m-4 p-2"
-                  onClick={() => setShowModal(false)}
-                >
-                  Cancel
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      )}
+    
     </div>
   );
 }

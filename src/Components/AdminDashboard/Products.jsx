@@ -83,7 +83,6 @@ export default function Products() {
                 <th className="fontBold bg-slate-500  text-white p-4">Name</th>
                 <th className="fontBold bg-slate-500  text-white p-4">SKU</th>
                 <th className="fontBold bg-slate-500  text-white p-4">Stock</th>
-                <th className="fontBold bg-slate-500  text-white p-4">Price</th>
                 <th className="fontBold bg-slate-500  text-white p-4">Categories</th>
                 <th className="fontBold bg-slate-500  text-white p-4">Tags</th>
                 <th className="fontBold bg-slate-500  text-white p-4">Published</th>
@@ -110,7 +109,6 @@ export default function Products() {
                 </td>
                 <td className="text-center p-4 bg-white">SKU123</td>
                 <td className="text-center p-4 bg-white">10</td>
-                <td className="text-center p-4 bg-white">$19.99</td>
                 <td className="text-center p-4 bg-white">Category A</td>
                 <td className="text-center p-4 bg-white">Tag 1, Tag 2</td>
                 <td className="text-center p-4 bg-white">2023/08/19 at 4:15pm</td>
@@ -135,7 +133,6 @@ export default function Products() {
                 </td>
                 <td className="text-center p-4">SKU123</td>
                 <td className="text-center p-4">10</td>
-                <td className="text-center p-4">$19.99</td>
                 <td className="text-center p-4">Category A</td>
                 <td className="text-center p-4">Tag 1, Tag 2</td>
                 <td className="text-center p-4">2023/08/19 at 4:15pm</td>
@@ -160,7 +157,6 @@ export default function Products() {
                 </td>
                 <td className="text-center p-4 bg-white">SKU123</td>
                 <td className="text-center p-4 bg-white">10</td>
-                <td className="text-center p-4 bg-white">$19.99</td>
                 <td className="text-center p-4 bg-white">Category A</td>
                 <td className="text-center p-4 bg-white">Tag 1, Tag 2</td>
                 <td className="text-center p-4 bg-white">2023/08/19 at 4:15pm</td>
@@ -185,7 +181,6 @@ export default function Products() {
                 </td>
                 <td className="text-center p-4">SKU123</td>
                 <td className="text-center p-4">10</td>
-                <td className="text-center p-4">$19.99</td>
                 <td className="text-center p-4">Category A</td>
                 <td className="text-center p-4">Tag 1, Tag 2</td>
                 <td className="text-center p-4">2023/08/19 at 4:15pm</td>
@@ -210,7 +205,6 @@ export default function Products() {
                 </td>
                 <td className="text-center p-4 bg-white">SKU123</td>
                 <td className="text-center p-4 bg-white">10</td>
-                <td className="text-center p-4 bg-white">$19.99</td>
                 <td className="text-center p-4 bg-white">Category A</td>
                 <td className="text-center p-4 bg-white">Tag 1, Tag 2</td>
                 <td className="text-center p-4 bg-white">2023/08/19 at 4:15pm</td>
@@ -235,7 +229,6 @@ export default function Products() {
                 </td>
                 <td className="text-center p-4">SKU123</td>
                 <td className="text-center p-4">10</td>
-                <td className="text-center p-4">$19.99</td>
                 <td className="text-center p-4">Category A</td>
                 <td className="text-center p-4">Tag 1, Tag 2</td>
                 <td className="text-center p-4">2023/08/19 at 4:15pm</td>
@@ -261,7 +254,6 @@ export default function Products() {
                 </td>
                 <td className="text-center p-4 bg-white">SKU123</td>
                 <td className="text-center p-4 bg-white">10</td>
-                <td className="text-center p-4 bg-white">$19.99</td>
                 <td className="text-center p-4 bg-white">Category A</td>
                 <td className="text-center p-4 bg-white">Tag 1, Tag 2</td>
                 <td className="text-center p-4 bg-white">2023/08/19 at 4:15pm</td>
